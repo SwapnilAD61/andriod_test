@@ -17,7 +17,7 @@ jobs:
         with:
           java-version: 11
       - name: Run Tests
-        run: bash ./gradlew test --stacktrace  
+        run: ./gradlew test --stacktrace  
   apk:
     name: Generate APK
     needs: test
@@ -30,7 +30,7 @@ jobs:
         with:
           java-version: 11
       - name: Build APK
-        run: bash ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v1
         with:
